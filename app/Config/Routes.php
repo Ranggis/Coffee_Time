@@ -44,6 +44,7 @@ $routes->get('user/profile', 'User::profile');
 $routes->post('user/update_profile', 'User::update_profile');
 $routes->get('user/cancel_order/(:num)', 'User::cancel_order/$1');
 
+
 // ================= ADMIN (PRIVATE CONSOLE) =================
 // 'filter' => 'adminAuth' memastikan hanya user dengan role admin yang bisa masuk
 $routes->group('admin', ['filter' => 'adminAuth'], function($routes) {
@@ -81,3 +82,4 @@ $routes->group('admin', ['filter' => 'adminAuth'], function($routes) {
     $routes->post('save_user', 'Admin::save_user');
     $routes->get('delete_user/(:num)', 'Admin::delete_user/$1');
 });
+
